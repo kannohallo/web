@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(30deg, rgb(175, 175, 226), rgb(33, 207, 126));
+            width: 100%;
+        }
+
+        .centrado {
+            text-align: center;
+        }
+
+        .encabezado {
+            margin-top: 5%;
+        }
+
+        embed {
+            width: 600px;
+            height: 300px;
+        }
+
+        img {
+            width: auto;
+            height: auto;
+            max-width: 200px;
+            max-height: 150px;
+        }
+
+        .caratulas {
+            float: left;
+            object-fit: cover;
+        }
+
+        .inicio {
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            grid-template-columns: repeat(5, 0.2fr);
+        }
+    </style>
+</head>
+
+<body class="centrado">
+
+    <script type="text/javascript">
+        function cambio1() {
+            var objetivo = document.getElementById("objetivo");
+            var crear = '<embed id="objetivo" loop="true" src="./audios/Cold.mp3" autoplay muted controls"></embed>';
+            var cambio = objetivo.parentNode
+            cambio.removeChild(objetivo);
+            cambio.innerHTML = crear + cambio.innerHTML;
+        };
+
+        function cambio2() {
+            var objetivo = document.getElementById("objetivo");
+            var crear = '<embed id="objetivo" loop="true" src="./audios/NeverGiveUp.mp3" autoplay muted controls"></embed>';
+            var cambio = objetivo.parentNode
+            cambio.removeChild(objetivo);
+            cambio.innerHTML = crear + cambio.innerHTML;
+        };
+
+        function cambio3() {
+            var objetivo = document.getElementById("objetivo");
+            var crear = '<embed id="objetivo" loop="true" src="./videos/FigthBack.mp4" autoplay muted controls"></embed>';
+            var cambio = objetivo.parentNode
+            cambio.removeChild(objetivo);
+            cambio.innerHTML = crear + cambio.innerHTML;
+        };
+
+        function cambio4() {
+            var objetivo = document.getElementById("objetivo");
+            var crear = '<embed id="objetivo" loop="true" src="./videos/Grateful.mp4" autoplay muted controls"></embed>';
+            var cambio = objetivo.parentNode
+            cambio.removeChild(objetivo);
+            cambio.innerHTML = crear + cambio.innerHTML;
+        };
+
+        function cambio5() {
+            var objetivo = document.getElementById("objetivo");
+            var crear = '<embed id="objetivo" loop="true" src="./audios/Rumors.mp3" autoplay muted controls"></embed>';
+            var cambio = objetivo.parentNode
+            cambio.removeChild(objetivo);
+            cambio.innerHTML = crear + cambio.innerHTML;
+        };
+    </script>
+    <div class="encabezado">
+        <h2>Neffex</h2>
+    </div>
+    <div class="video"><embed id="objetivo" loop="true" src="./videos/BestOfMe.mp4" autoplay muted controls></embed></div>
+    <div class="inicio">
+        <div class="caratulas"><img id="imagen1" onClick="cambio1()" src="./imagenes/cold.jpg">
+            <div class="caratulas"><img id="imagen2" onClick="cambio2()" src="./imagenes/never.jpg"></div>
+
+            <div class="caratulas"><img id="imagen3" onClick="cambio3()" src="./imagenes/figth.webp"></div>
+            <div class="caratulas"><img id="imagen4" onclick="cambio4()" src="./imagenes/Grateful.jpg"></div>
+            <div class="caratulas"><img id="imagen5" onclick="cambio5()" src="./imagenes/rumors.jpg"></div>
+
+        </div>
+
+</body>
+
+</html>
